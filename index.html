@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laundry Service</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Laundry logo">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <button class="user-btn">Siddharth</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-left">
+      <h1>
+        Revitalize Your <br>
+        Clothes with Expert <br>
+        <span>Laundry Services!</span>
+      </h1>
+
+      <p>
+        From premium dry cleaning to swift wash and fold,
+        we deliver care and convenience.
+      </p>
+
+      <a href="#services" class="hero-btn">
+        <i class="fa-solid fa-basket-shopping"></i>
+        Book a service today!
+      </a>
+    </div>
+
+    <div class="hero-right">
+      <img src="https://cdn-icons-png.flaticon.com/512/2975/2975175.png" alt="Laundry illustration">
+    </div>
+  </section>
+
+  <section class="achievements">
+    <h2>Our Achievements</h2>
+
+    <div class="stats">
+      <div>
+        <h3>15+</h3>
+        <p>Laundry Services</p>
+      </div>
+
+      <div>
+        <h3>240+</h3>
+        <p>Happy Customers</p>
+      </div>
+
+      <div>
+        <h3>2+ Yrs</h3>
+        <p>Experience</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-section" id="services">
+    <div class="services-box">
+      <h2>Our Services</h2>
+      <p class="small-text">Click on the add to cart button to add services</p>
+      <hr>
+
+      <div class="service">
+        <span>👕 Dry Cleaning - ₹200</span>
+        <div id="btn1">
+          <button class="add-btn" onclick="addToCart('Dry Cleaning',200)">Add Item +</button>
+        </div>
+      </div>
+
+      <div class="service">
+        <span>🧺 Wash & Fold - ₹100</span>
+        <div id="btn2">
+          <button class="add-btn" onclick="addToCart('Wash & Fold',100)">Add Item +</button>
+        </div>
+      </div>
+
+      <div class="service">
+        <span>✨ Ironing - ₹30</span>
+        <div id="btn3">
+          <button class="add-btn" onclick="addToCart('Ironing',30)">Add Item +</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <div class="cart-box">
+        <h3>Added Items</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Service</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="cartBody">
+            <tr>
+              <td colspan="3">No Items Added</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="total">
+          <span>Total Amount</span>
+          <strong>₹<span id="total">0</span></strong>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <h3>Book Now</h3>
+
+        <form id="booking-form">
+          <label>Full Name</label>
+          <input type="text" id="name" placeholder="John Doe" required>
+
+          <label>Email ID</label>
+          <input type="email" id="email" placeholder="mail@gmail.com" required>
+
+          <label>Phone Number</label>
+          <input type="text" id="phone" placeholder="0000000000" required>
+
+          <button type="submit" class="submit-btn">Book now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="about">
+    <div class="feature-card">
+      <i class="fa-solid fa-shirt"></i>
+      <h4>Premium Services</h4>
+      <p>Best laundry care for your clothes.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-headset"></i>
+      <h4>Quick Support</h4>
+      <p>Friendly support anytime.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-truck"></i>
+      <h4>Hassle Free Delivery</h4>
+      <p>Pickup and delivery available.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-tags"></i>
+      <h4>Affordable Prices</h4>
+      <p>Budget friendly laundry service.</p>
+    </div>
+  </section>
+
+ <section class="newsletter">
+  <div class="newsletter-left">
+    <h2>
+      Subscribe to our <br>
+      newsletter.
+    </h2>
+  </div>
+
+  <div class="newsletter-right">
+    <input type="text" id="subName" placeholder="Full name">
+    <input type="email" id="subEmail" placeholder="Email">
+    <button type="button" id="subscribeBtn">Subscribe</button>
+  </div>
+</section>
+
+  <footer class="footer" id="contact">
+    <div class="footer-box">
+      <div>
+        <h2>Logo</h2>
+        <p>Laundry care you can trust.</p>
+      </div>
+
+      <div>
+        <h4>Important Links</h4>
+        <p>About us</p>
+        <p>Contact us</p>
+        <p>Privacy Policy</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>mail@site.com</p>
+        <p>+91 91234 56780</p>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
